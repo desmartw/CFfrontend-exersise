@@ -9,24 +9,6 @@
   </head>
   <body>
     <div id="app">
-
-    <div v-if = "preQuiz">
-      <h1> Welcome to my Quiz </h1>
-        <p> It is a very nice quiz </p>
-        <button @click = "beginQuiz"> Begin Quiz Now</button>
-    </div>
-
-    <div v-if = "inQuiz">
-      <question
-              :"questions[qIndex]"
-              v-on:answers="isCorrect"
-              :question-number = "qIndex+1"
-      ></question>
-    </div>
-
-    <div v-if="resultSummary">
-      You got {{correct}} correct out of {{questions.length}} questions.
-    </div>
   </div>
     <!-- built files will be auto injected -->
   </body>
