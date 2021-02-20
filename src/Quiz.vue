@@ -97,7 +97,7 @@ export default {
         this.firstClick = true;
         return this.qIndex;
       // has answered, at end
-    } else if (hasAnswered && qIndex == (this.questions.length -1 )) {
+    } else if (hasAnswered && qIndex === (this.questions.length -1 )) {
         this.resultSummary = true;
         this.inQuiz = false;
         this.firstClick = true;
@@ -115,7 +115,7 @@ export default {
       this.hasAnswered = true;
       // selected the right answer
       if(firstClick) {
-        if (answer == this.questions[this.qIndex].correct) {
+        if (answer === this.questions[this.qIndex].correct) {
           this.pickedAnswers.push(answer);
           this.firstClick = false;
         } else {
@@ -129,7 +129,7 @@ export default {
         // picked answer array and add new choice
       } else {
         // correct answer
-        if (answer == this.questions[this.qIndex].correct) {
+        if (answer === this.questions[this.qIndex].correct) {
           this.pickedAnswers.pop();
           this.pickedAnswers.push(answer);
           // wrong answer
